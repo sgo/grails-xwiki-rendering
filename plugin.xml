@@ -1,0 +1,20 @@
+<plugin name='xwiki-rendering' version='0.1' grailsVersion='1.1.1 &gt; *'>
+  <author>Luis Arias</author>
+  <authorEmail>luis.arias@pilango.com</authorEmail>
+  <title>Provides XWiki Rendering in Grails</title>
+  <description>\
+The XWiki Rendering Plugin currently provides a xwikiRender gsp tag that allows
+you to embed any of the various wiki syntaxes that are supported.  See here to
+learn more about the XWiki Rendering Module and its features:
+
+http://code.xwiki.org/xwiki/bin/view/Modules/RenderingModule
+</description>
+  <documentation>http://grails.org/XwikiRendering+Plugin</documentation>
+  <resources>
+    <resource>org.groovy.grails.plugins.xwiki.rendering.services.RenderingService</resource>
+    <resource>org.groovy.grails.plugins.xwiki.rendering.taglib.RenderingTagLib</resource>
+    <resource>UrlMappings</resource>
+    <resource>DataSource</resource>
+  </resources>
+  <dependencies />
+</plugin>
