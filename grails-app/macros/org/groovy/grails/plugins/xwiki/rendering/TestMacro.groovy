@@ -3,7 +3,7 @@ package org.groovy.grails.plugins.xwiki.rendering
 import org.xwiki.rendering.block.WordBlock
 import org.xwiki.rendering.transformation.MacroTransformationContext
 import org.xwiki.rendering.block.Block
-import org.groovy.grails.plugins.xwiki.renderer.MacroAdapter
+
 import org.xwiki.rendering.block.ParagraphBlock
 
 /**

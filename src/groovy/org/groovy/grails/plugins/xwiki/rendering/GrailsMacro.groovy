@@ -1,4 +1,4 @@
-package org.groovy.grails.plugins.xwiki.renderer
+package org.groovy.grails.plugins.xwiki.rendering
 
 import org.xwiki.rendering.transformation.MacroTransformationContext
 import org.xwiki.rendering.block.Block

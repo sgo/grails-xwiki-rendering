@@ -1,4 +1,4 @@
-package org.groovy.grails.plugins.xwiki.renderer
+package org.groovy.grails.plugins.xwiki.rendering
 
 import org.springframework.web.context.request.RequestContextHolder as RCH
 

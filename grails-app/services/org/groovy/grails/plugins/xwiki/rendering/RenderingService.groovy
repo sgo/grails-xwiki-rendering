@@ -20,7 +20,7 @@ class RenderingService {
         Parser parser = componentManager.lookup(Parser.class, syntax)
         XDOM dom = parser.parse(new StringReader(input))
 
-        // create xhtml renderer
+        // create xhtml rendering
         PrintRendererFactory factory = componentManager.lookup(PrintRendererFactory, Syntax.XHTML_1_0.toIdString())
         DefaultWikiPrinter printer = new DefaultWikiPrinter()
         Renderer renderer = factory.createRenderer(printer)

@@ -1,15 +1,15 @@
 import org.xwiki.component.embed.EmbeddableComponentManager
 import org.slf4j.Logger
-import org.groovy.grails.plugins.xwiki.renderer.GrailsMacroClass
+import org.groovy.grails.plugins.xwiki.rendering.GrailsMacroClass
 import org.springframework.beans.factory.config.MethodInvokingFactoryBean
-import org.groovy.grails.plugins.xwiki.renderer.MacroArtefactHandler
-import org.groovy.grails.plugins.xwiki.renderer.MacroAdapter
-import org.groovy.grails.plugins.xwiki.renderer.Macro
+import org.groovy.grails.plugins.xwiki.rendering.MacroArtefactHandler
+import org.groovy.grails.plugins.xwiki.rendering.MacroAdapter
+import org.groovy.grails.plugins.xwiki.rendering.Macro
 
 import org.apache.commons.lang.WordUtils
 import org.xwiki.component.descriptor.DefaultComponentDescriptor
 import org.xwiki.properties.BeanManager
-import org.groovy.grails.plugins.xwiki.renderer.GrailsMacro
+import org.groovy.grails.plugins.xwiki.rendering.GrailsMacro
 import org.groovy.grails.plugins.xwiki.rendering.RenderingService
 import org.groovy.grails.plugins.xwiki.rendering.RenderingService
 
