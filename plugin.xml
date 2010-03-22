@@ -11,8 +11,8 @@ http://code.xwiki.org/xwiki/bin/view/Modules/RenderingModule
 </description>
   <documentation>http://grails.org/XwikiRendering+Plugin</documentation>
   <resources>
-    <resource>org.groovy.grails.plugins.xwiki.rendering.services.RenderingService</resource>
-    <resource>org.groovy.grails.plugins.xwiki.rendering.taglib.RenderingTagLib</resource>
+    <resource>org.groovy.grails.plugins.xwiki.rendering.RenderingService</resource>
+    <resource>org.groovy.grails.plugins.xwiki.rendering.RenderingTagLib</resource>
     <resource>UrlMappings</resource>
     <resource>DataSource</resource>
   </resources>

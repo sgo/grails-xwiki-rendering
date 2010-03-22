@@ -1,4 +1,4 @@
-package org.groovy.grails.plugins.xwiki.rendering.taglib
+package org.groovy.grails.plugins.xwiki.rendering
 
 /**
 *  TagLib providing access to syntax rendering and transformation through the

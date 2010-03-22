@@ -1,0 +1,17 @@
+.classpath
+.project
+.settings
+*.launch
+plugin.xml
+stacktrace.log
+web-app/WEB-INF/tld/*.tld
+/docs
+*.zip
+*.i*
+out
+test/reports
+web-app/plugins
+*.tmproj
+lib/*
+cobertura.ser
+target/*
