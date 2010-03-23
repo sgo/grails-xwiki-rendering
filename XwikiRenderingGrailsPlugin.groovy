@@ -25,7 +25,12 @@ class XwikiRenderingGrailsPlugin {
     def dependsOn = [:]
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
-            "grails-app/views/error.gsp"
+            "grails-app/views/error.gsp",
+            'grails-app/views/index.gsp',
+            'grails-app/conf/UrlMappings.groovy',
+            'grails-app/i18n/messages.properties',
+            'lib/**/*',
+            'web-app/**/*'
     ]
 
     def artefacts = [MacroArtefactHandler]
