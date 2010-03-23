@@ -11,7 +11,7 @@ import org.xwiki.rendering.transformation.TransformationManager
 
 class RenderingService {
 
-    boolean transactional = false
+    static boolean transactional = false
 
     ComponentManager componentManager
 
@@ -21,12 +21,12 @@ class RenderingService {
         XDOM dom = parser.parse(new StringReader(input))
 
         // create xhtml rendering
-        PrintRendererFactory factory = componentManager.lookup(PrintRendererFactory, Syntax.XHTML_1_0.toIdString())
+        PrintRendererFactory factory = componentManager.lookup(PrintRendererFactory, Syntax.XHTML_1_0.toIdString()) as PrintRendererFactory
         DefaultWikiPrinter printer = new DefaultWikiPrinter()
         Renderer renderer = factory.createRenderer(printer)
 
         // handle macro's
-        TransformationManager txManager = componentManager.lookup(TransformationManager)
+        TransformationManager txManager = componentManager.lookup(TransformationManager) as TransformationManager
         txManager.performTransformations dom, parser.syntax
 
         // perform transformation
