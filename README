@@ -1,1 +1,61 @@
-Fork of http://svn.codehaus.org/grails-plugins/grails-xwiki-rendering/trunk/ to add macro support
+<p>The XWiki Rendering Plugin currently provides a xwikiRender gsp tag that allows you to embed any of the various wiki syntaxes that are supported and render XHTML.</p>
+
+<ul>
+<li>XWiki 1.0</li>
+<li>XWiki 2.0</li>
+<li>Confluence</li>
+<li>MediaWiki</li>
+<li>JSPWiki</li>
+<li>Creole</li>
+</ul>
+
+<p>
+The plugin also includes a RenderingService that exposes a renderAsXHTML() method for use from within a controller or another service.
+Or alternatively you can call the method renderAsXHTML(syntax:String) method on any String instance.
+</p>
+
+<p>You can learn more about the XWiki Rendering Module and its features here:</p>
+
+<a href="http://code.xwiki.org/xwiki/bin/view/Modules/RenderingModule">http://code.xwiki.org/xwiki/bin/view/Modules/RenderingModule</a>
+
+<h1>Macro Support</h1>
+
+<p>XWiki supports a set of macro's as listed on <a href="http://code.xwiki.org/xwiki/bin/view/Macros/">http://code.xwiki.org/xwiki/bin/view/Macros/</a>.
+Some are supported out of the box while others require you to include the appropriate jar file on the classpath.</p>
+
+<p>This plugin also let's you define your own custom Macro's through a new Grails macro artefact.</p>
+
+<p>To create a custom macro create a new class in grails-app/macros using the Macro suffix and implementing the Macro
+interface or extending the abstract MacroAdapter class. The MacroAdapter allows you to quickly create a no-parameters
+macro by implementing the execute(params:Object, content:String, context:MacroTransformationContext):List method.</p>
+
+E.g:
+<pre>
+class TestMacro extends MacroAdapter {
+    def List<Block> execute(def params, String content, MacroTransformationContext context) {
+        [new ParagraphBlock([new WordBlock("Hello World!")])]
+    }
+}
+</pre>
+
+<p>For details on how to construct the desired text structure see the <a href="http://platform.xwiki.org/xwiki/bin/view/DevGuide/API">xwiki api</a>.</p>
+
+<p>If you want to be able to specify parameters with your macro set the parameterClass property and implement the class in the same macro source file.</p>
+
+E.g:
+<pre>
+class TestMacro extends MacroAdapter {
+    Class parameterClass = TestMacroParameters
+
+    def List<Block> execute(def params, String content, MacroTransformationContext context) {
+        [new ParagraphBlock([new WordBlock("Hello $params.who!")])]
+    }
+}
+
+class TestMacroParameters {
+
+    String who = 'Wiki'
+}
+</pre>
+
+<p>Like usual with Grails artefacts you can edit both the macro and parameter class implementations and Grails will pick up and reload the changes.</p>
